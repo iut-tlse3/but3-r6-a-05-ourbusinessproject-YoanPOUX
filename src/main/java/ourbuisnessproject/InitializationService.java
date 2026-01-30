@@ -18,6 +18,9 @@ public class InitializationService {
     @Autowired
     private EnterpriseProjectService enterpriseProjectService;
 
+    /**
+     * Si une requête d'une transaction échoue, il y à un rollback et donc aucune requête n'est sauvegardée
+     */
     @Transactional
     public void initProjects() {
         initEnterprise();
